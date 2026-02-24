@@ -221,6 +221,10 @@ TEST 23 - Classic test word
     'e' --> 1
     'o' --> 1
   Result:
+    'l' --> 2
+    'h' --> 1
+    'e' --> 1
+    'o' --> 1
 
 TEST 24 - Famous test case
   Run: echo "mississippi" | ./Encryption-Term-Project
@@ -230,6 +234,10 @@ TEST 24 - Famous test case
     'p' --> 2
     'm' --> 1
   Result:
+    's' --> 4
+    'i' --> 4
+    'p' --> 2
+    'm' --> 1
 
 TEST 25 - Two word sentence
   Run: echo "hello world" | ./Encryption-Term-Project
@@ -238,6 +246,14 @@ TEST 25 - Two word sentence
     'o' --> 2
     (all remaining chars --> 1)
   Result:
+    'l' --> 3
+    'o' --> 2
+    'e' --> 1
+    'w' --> 1
+    'd' --> 1
+    ' ' --> 1
+    'h' --> 1
+    'r' --> 1
 
 TEST 26 - Same letter different case
   Run: echo "AaAaAa" | ./Encryption-Term-Project
@@ -245,13 +261,17 @@ TEST 26 - Same letter different case
     'A' --> 3
     'a' --> 3
   Result:
+    'a' --> 3
+    'A' --> 3
 
-TEST 27 - Special characters mixed in
+TEST 27 - Special characters mixed in ( use single quotes if using zsh )
   Run: echo "a!a!a!" | ./Encryption-Term-Project
   Expected (order may vary):
     'a' --> 3
     '!' --> 3
   Result:
+    '!' --> 3
+    'a' --> 3
 
 TEST 28 - Repeated pattern long string
   Run: echo "abcabcabcabc" | ./Encryption-Term-Project
@@ -260,18 +280,36 @@ TEST 28 - Repeated pattern long string
     'b' --> 4
     'c' --> 4
   Result:
+    'c' --> 4
+    'a' --> 4
+    'b' --> 4
 
 TEST 29 - All digits no repeats
   Run: echo "1234567890" | ./Encryption-Term-Project
-  Expected: 10 lines, each digit showing --> 1
+  Expected:
+    10 lines, each digit showing --> 1
   Result:
+    '0' --> 1
+    '1' --> 1
+    '2' --> 1
+    '3' --> 1
+    '4' --> 1
+    '5' --> 1
+    '6' --> 1
+    '7' --> 1
+    '8' --> 1
+    '9' --> 1
 
 TEST 30 - One character dominates
   Run: echo "aaaaaaaaaaabc" | ./Encryption-Term-Project
   Expected: first line must be
     'a' --> 11
-    then 'b' --> 1 and 'c' --> 1 in any order
+    'b' --> 1
+    'c' --> 1
   Result:
+    'a' --> 11
+    'c' --> 1
+    'b' --> 1
 
 
 =============================================================
@@ -279,13 +317,11 @@ TEST 30 - One character dominates
 =============================================================
 
   Total tests:   30
-  Passed:        ___
-  Failed:        ___
+    Passed:      30
+    Failed:       0
 
   Tests that failed:
- ___________________
- ___________________
- ___________________
+    (none)
 
 =============================================================
 */
