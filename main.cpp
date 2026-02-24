@@ -30,6 +30,7 @@ int main() {
     if (input.empty()) {
         cout << endl << "You didn't enter anything!" << endl;
 
+        // End program if no input was given
         return 0;
     }
 
