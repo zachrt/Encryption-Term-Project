@@ -12,20 +12,19 @@
 using namespace std;
 
 unordered_map<char, int> getFrequencies(string input) {
-    unordered_map<char, int> freqMap;
+    unordered_map<char, int> map;
 
     for (int i = 0; i < input.length(); i++) {
-        freqMap[input[i]]++;
+        map[input[i]]++;
     }
 
-    return freqMap;
+    return map;
 }
 
 int main() {
-
     string input;
     cout << "Enter a string: ";
-    
+
     getline(cin, input);
 
     if (input.empty()) {
@@ -43,6 +42,7 @@ int main() {
         pq.push(n);
     }
 
+    // For Testing
     cout << "\nCharacter Frequencies (highest to lowest):" << endl;
     cout << "-------------------------------------------" << endl;
 

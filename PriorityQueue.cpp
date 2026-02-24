@@ -4,6 +4,7 @@ void PriorityQueue::push(Node* n) {
     data.push_back(n);
 
     int i = data.size() - 1;
+
     while (i > 0) {
         int parent = (i - 1) / 2;
         if (data[parent]->freq < data[i]->freq) {
@@ -25,6 +26,7 @@ Node* PriorityQueue::pop() {
     data.pop_back();
 
     int i = 0;
+    
     while (true) {
         int left  = 2 * i + 1;
         int right = 2 * i + 2;
