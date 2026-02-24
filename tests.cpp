@@ -1,7 +1,7 @@
 /*
 =============================================================
-  MANUAL TEST PLAN - Encryption Term Project
-  CSC 375 - Data Structures
+  TEST PLAN - Encryption Term Project
+  CSC 375 - Data Structures ( Zach and Talon )
 =============================================================
 
 HOW TO USE THIS:
@@ -195,18 +195,23 @@ TEST 20 - Queue fully empties (right number of lines printed)
     'b' --> 1
     'c' --> 1
   Result:
+    'c' --> 1
+    'a' --> 1
+    'b' --> 1
 
 TEST 21 - Empty input
   Run: echo "" | ./Encryption-Term-Project
   Expected:
     You didn't enter anything!
   Result:
+    You didn't enter anything!
 
 TEST 22 - Single character
   Run: echo "x" | ./Encryption-Term-Project
   Expected:
     'x' --> 1
   Result:
+    'x' --> 1
 
 TEST 23 - Classic test word
   Run: echo "hello" | ./Encryption-Term-Project
