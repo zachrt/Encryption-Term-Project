@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/Encryption-Term-Project.dir/main.cpp.o" "CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o" "CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o" -o Encryption-Term-Project
