@@ -25,10 +25,12 @@ int main() {
 
     string input;
     cout << "Enter a string: ";
+    
     getline(cin, input);
 
     if (input.empty()) {
-        cout << "You didn't enter anything!" << endl;
+        cout << endl << "You didn't enter anything!" << endl;
+
         return 0;
     }
 

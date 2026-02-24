@@ -2,7 +2,7 @@
 
 void PriorityQueue::push(Node* n) {
     data.push_back(n);
-    // bubble up
+
     int i = data.size() - 1;
     while (i > 0) {
         int parent = (i - 1) / 2;
@@ -24,7 +24,6 @@ Node* PriorityQueue::pop() {
     data[0] = data[data.size() - 1];
     data.pop_back();
 
-    // bubble down
     int i = 0;
     while (true) {
         int left  = 2 * i + 1;
