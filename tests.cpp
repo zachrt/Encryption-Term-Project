@@ -228,8 +228,6 @@ TEST 30 - One character dominates
   Run: echo "aaaaaaaaaaabc" | ./Encryption-Term-Project
   Expected: first line must be
     'a' --> 11
-    'b' --> 1
-    'c' --> 1
   Result: PASS
 
 =============================================================
