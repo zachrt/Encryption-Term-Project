@@ -129,29 +129,53 @@ Encryption-Term-Project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/build
 .PHONY : Encryption-Term-Project/fast
 
-Node.o: Node.cpp.o
-.PHONY : Node.o
+FileHandler.o: FileHandler.cpp.o
+.PHONY : FileHandler.o
 
 # target to build an object file
-Node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o
-.PHONY : Node.cpp.o
+FileHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o
+.PHONY : FileHandler.cpp.o
 
-Node.i: Node.cpp.i
-.PHONY : Node.i
+FileHandler.i: FileHandler.cpp.i
+.PHONY : FileHandler.i
 
 # target to preprocess a source file
-Node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/Node.cpp.i
-.PHONY : Node.cpp.i
+FileHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.i
+.PHONY : FileHandler.cpp.i
 
-Node.s: Node.cpp.s
-.PHONY : Node.s
+FileHandler.s: FileHandler.cpp.s
+.PHONY : FileHandler.s
 
 # target to generate assembly for a file
-Node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/Node.cpp.s
-.PHONY : Node.cpp.s
+FileHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.s
+.PHONY : FileHandler.cpp.s
+
+HuffmanTree.o: HuffmanTree.cpp.o
+.PHONY : HuffmanTree.o
+
+# target to build an object file
+HuffmanTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o
+.PHONY : HuffmanTree.cpp.o
+
+HuffmanTree.i: HuffmanTree.cpp.i
+.PHONY : HuffmanTree.i
+
+# target to preprocess a source file
+HuffmanTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.i
+.PHONY : HuffmanTree.cpp.i
+
+HuffmanTree.s: HuffmanTree.cpp.s
+.PHONY : HuffmanTree.s
+
+# target to generate assembly for a file
+HuffmanTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Encryption-Term-Project.dir/build.make CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.s
+.PHONY : HuffmanTree.cpp.s
 
 PriorityQueue.o: PriorityQueue.cpp.o
 .PHONY : PriorityQueue.o
@@ -210,9 +234,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Encryption-Term-Project"
-	@echo "... Node.o"
-	@echo "... Node.i"
-	@echo "... Node.s"
+	@echo "... FileHandler.o"
+	@echo "... FileHandler.i"
+	@echo "... FileHandler.s"
+	@echo "... HuffmanTree.o"
+	@echo "... HuffmanTree.i"
+	@echo "... HuffmanTree.s"
 	@echo "... PriorityQueue.o"
 	@echo "... PriorityQueue.i"
 	@echo "... PriorityQueue.s"

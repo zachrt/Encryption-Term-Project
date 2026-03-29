@@ -1,5 +1,7 @@
 # Prerequisites
 *.d
+bigfile_random.dat
+compressed.huff
 
 # Compiled Object files
 *.slo

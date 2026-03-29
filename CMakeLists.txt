@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Encryption-Term-Project
     main.cpp
-    Node.cpp
     PriorityQueue.cpp
-    HuffTree.cpp
+    HuffmanTree.cpp
+    FileHandler.cpp
 )

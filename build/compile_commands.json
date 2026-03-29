@@ -7,14 +7,20 @@
 },
 {
   "directory": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/build",
-  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp",
-  "file": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp",
-  "output": "CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o"
-},
-{
-  "directory": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/build",
   "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/PriorityQueue.cpp",
   "file": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/PriorityQueue.cpp",
   "output": "CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o"
+},
+{
+  "directory": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp",
+  "file": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp",
+  "output": "CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o"
+},
+{
+  "directory": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++17 -arch arm64 -o CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp",
+  "file": "/Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp",
+  "output": "CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o"
 }
 ]
