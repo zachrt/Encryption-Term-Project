@@ -16,5 +16,7 @@ class HuffTree {
 		
 		Node* getRoot();
 
-		void testPrint(Node* n);
+		void testPrint(Node* n, int depth);
+
+		
 };

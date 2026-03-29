@@ -56,12 +56,14 @@ int main() {
     }
     */
 
-    /*
     HuffTree tree;
 
     tree.buildTreeFromQueue(pq);
-    tree.testPrint(tree.getRoot());
-    */
+
+    // Tree test
+    tree.testPrint(tree.getRoot(), 0);
     
+    
+
     return 0;
 }

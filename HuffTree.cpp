@@ -33,15 +33,23 @@ Node* HuffTree::getRoot() {
 	return root;
 }
 
-void HuffTree::testPrint(Node* n) {
-	cout << n->ch << " " << n->freq;
-	if (n->left != nullptr) {
-		cout << " (";
-		testPrint(n->left);
-		if (n->right != nullptr) {
-			cout << ", ";
-			testPrint(n->right);
-		}
-		cout << ") ";
+// Traverses and prints for testing purposes
+void HuffTree::testPrint(Node* n, int depth) {
+	for (int i = 0; i < depth; i++) {
+		cout << "    ";
 	}
+	cout << "'" << n->ch << "' " << n->freq;
+	if (n->left != nullptr) {
+		cout << "(" << endl;
+		
+		testPrint(n->left, depth + 1);
+		if (n->right != nullptr) {
+			testPrint(n->right, depth + 1);
+		}
+		for (int i = 0; i < depth; i++) {
+			cout << "    ";
+		}
+		cout << ")" << endl;
+	}
+	cout << endl;
 }

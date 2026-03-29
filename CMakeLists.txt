@@ -7,4 +7,5 @@ add_executable(Encryption-Term-Project
     main.cpp
     Node.cpp
     PriorityQueue.cpp
+    HuffTree.cpp
 )
