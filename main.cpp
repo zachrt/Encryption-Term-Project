@@ -61,9 +61,12 @@ int main() {
     tree.buildTreeFromQueue(pq);
 
     // Tree test
-    tree.testPrint(tree.getRoot(), 0);
+    // tree.testPrint(tree.getRoot(), 0);
     
     
+    string code = "";
+    cout << "Character Codes:" << endl;
+    tree.generateCodes(tree.getRoot(), code);
 
     return 0;
 }

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 using  namespace std;
 
 class Node {
@@ -8,6 +8,7 @@ public:
     int freq;
     Node* left = nullptr;
     Node* right = nullptr;
+    string code;
 
     Node(char c, int f);
 };

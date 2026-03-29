@@ -18,5 +18,5 @@ class HuffTree {
 
 		void testPrint(Node* n, int depth);
 
-		
+		void generateCodes(Node* n, string code);
 };

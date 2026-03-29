@@ -53,3 +53,17 @@ void HuffTree::testPrint(Node* n, int depth) {
 	}
 	cout << endl;
 }
+
+void HuffTree::generateCodes(Node* n, string code) {
+	if (n->left == nullptr && n->right == nullptr) {
+		n->code = code;
+
+		// Testing
+		cout << "'" << n->ch << "' --> " << code << endl;
+
+	}
+	else {
+		generateCodes(n->left, code + "0");
+		generateCodes(n->right, code + "1");
+	}
+}
