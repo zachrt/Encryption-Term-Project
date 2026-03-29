@@ -8,6 +8,7 @@
 
 #include "Node.h"
 #include "PriorityQueue.h"
+#include "HuffTree.h"
 
 using namespace std;
 
@@ -43,8 +44,9 @@ int main() {
         pq.push(n);
     }
 
+    /*
     // For Testing
-    cout << "\nCharacter Frequencies (highest to lowest):" << endl;
+    cout << "\nCharacter Frequencies (lowest to highest):" << endl;
     cout << "-------------------------------------------" << endl;
 
     while (!pq.isEmpty()) {
@@ -52,6 +54,14 @@ int main() {
         cout << "'" << n->ch << "' --> " << n->freq << endl;
         delete n;
     }
+    */
 
+    /*
+    HuffTree tree;
+
+    tree.buildTreeFromQueue(pq);
+    tree.testPrint(tree.getRoot());
+    */
+    
     return 0;
 }
