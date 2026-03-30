@@ -230,6 +230,273 @@ TEST 30 - One character dominates
     'a' --> 11
   Result: PASS
 
+TEST 31 - Tree stores a single character
+  Run: echo "a" | ./Encryption-Term-Project
+  Expected:
+    'a' 1
+  Result: PASS
+
+TEST 32 - Tree stores two characters as leaves
+  Run: echo "ab" | ./Encryption-Term-Project
+  Expected:
+    '*' 2(
+        'a' 1
+        'b' 1
+    )
+  Result: PASS
+
+TEST 33 - Internal nodes can store other internal nodes
+  Run: echo "abc" | ./Encryption-Term-Project
+  Expected:
+    '*' 3(
+        'b' 1
+        '*' 2(
+           'a' 1
+           'c' 1
+        )
+    )
+  Result: PASS
+
+TEST 34 - Characters of same frequencies are stored together
+  Run: echo "abcc" | ./Encryption-Term-Project
+  Expected:
+    '*' 4(
+        'c' 2
+        '*' 2(
+           'a' 1
+           'b' 1
+        )
+    )
+  Result: PASS
+
+TEST 35 - Internal node's frequency is sum of leaves' frequencies
+  Run: echo "ab" | ./Encryption-Term-Project
+  Expected: first line must be
+    '*' 2(
+  Result: PASS
+
+TEST 36 - Root's frequency is sum of all leaves' frequencies
+  Run: echo "abc" | ./Encryption-Term-Project
+  Expected: first line must be
+    '*' 3(
+  Result: PASS
+
+TEST 37 - Internal node with higher frequency than leaf is placed later in queue
+  Run: echo "aabbccc" | ./Encryption-Term-Project
+  Expected:
+    '*' 7(
+        'c' 3
+        '*' 4(
+            'a' 2
+            'b' 2
+        )
+    )
+  Result: PASS
+
+TEST 38 - Lowest frequency character is now named first (change from earlier versions)
+  Run: echo "aaabbc" | ./Encryption-Term-Project
+  Expected: first line must be
+    'c' --> 1
+  Result: PASS
+
+TEST 39 - Tree stores spaces
+  Run: echo " " | ./Encryption-Term-Project
+  Expected:
+    ' ' 1
+  Result: PASS
+
+TEST 40 - Tree stores multiple word input
+  Run: echo "a a a" | ./Encryption-Term-Project
+  Expected:
+    '*' 5(
+        ' ' 2
+        'a' 3
+    )
+  Result: PASS
+
+TEST 41 - Tree stores strings with numbers
+  Run: echo "1" | ./Encryption-Term-Project
+  Expected:
+    '1' 1
+  Result: PASS
+
+TEST 42 - Tree stores special characters
+  Run: echo "!!" | ./Encryption-Term-Project
+  Expected:
+    '!' 2
+  Result: PASS
+
+TEST 43 - Tree stores letters and special characters
+  Run: echo "a!a!" | ./Encryption-Term-Project
+  Expected:
+    '*' 4(
+        '!' 2
+        'a' 2
+    )
+  Result: PASS
+
+TEST 44 - Characters of nearest low frequency are stored together
+  Run: echo "abbccc" | ./Encryption-Term-Project
+  Expected:
+    '*' 6(
+        'c' 3
+        '*' 3(
+           'a' 1
+           'b' 2
+        )
+    )
+  Result: PASS
+
+TEST 45 - All digits no repeats
+  Run: echo "1234567890" | ./Encryption-Term-Project
+  Expected: 10 leaf nodes
+    '[digit]' 1
+  Result: PASS
+
+TEST 46 - Queue fully empties
+  Run: echo "abcdef" | ./Encryption-Term-Project
+  Expected: 6 leaf nodes
+    '[character]' 1
+  Result: PASS
+
+TEST 47 - Mixed capital and lowercase letters
+  Run: echo "AaAa" | ./Encryption-Term-Project
+  Expected:
+    '*' 4(
+        'a' 2
+        'A' 2
+    )
+  Result: PASS
+
+TEST 48 - Mixed letters and numbers
+  Run: echo "aa22" | ./Encryption-Term-Project
+  Expected:
+    '*' 4(
+        'a' 2
+        '2' 2
+    )
+  Result: PASS
+
+TEST 49 - Mixed numbers and special characters
+  Run: echo "1!1!" | ./Encryption-Term-Project
+  Expected:
+    '*' 4(
+        '!' 2
+        '1' 2
+    )
+  Result: PASS
+  
+TEST 50 - All character types combined
+  Run: echo "aA1!" | ./Encryption-Term-Project
+  Expected: 4 leaf nodes
+    '[character]' 1
+  Result: PASS
+
+TEST 51 - Single character binary code
+  Run: echo "a" | ./Encryption-Term-Project
+  Expected:
+    'a' --> 0
+  Result: PASS
+
+TEST 52 - Two characters have different codes
+  Run: echo "ab" | ./Encryption-Term-Project
+  Expected:
+    'a' --> 0
+    'b' --> 1
+  Result: PASS
+
+TEST 53 - Length of codes increases with number of characters
+  Run: echo "ab" | ./Encryption-Term-Project
+  Expected:
+    'a' --> 0
+    'b' --> 10
+    'c' --> 11
+  Result: PASS
+
+TEST 54 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 55 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 56 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 57 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 58 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 59 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 60 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 61 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 62 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 63 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 64 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 65 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 66 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 67 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 68 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 69 -
+  Run:
+  Expected:
+  Result: PASS
+
+TEST 70 -
+  Run:
+  Expected:
+  Result: PASS
 =============================================================
   RESULTS SUMMARY
 =============================================================

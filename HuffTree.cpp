@@ -35,6 +35,12 @@ Node* HuffTree::getRoot() {
 
 // Traverses and prints for testing purposes
 void HuffTree::testPrint(Node* n, int depth) {
+	
+	// Prevents issues if run with empty queue due to queue tests
+	if (n == nullptr) {
+		return;
+	}
+
 	for (int i = 0; i < depth; i++) {
 		cout << "    ";
 	}
@@ -49,13 +55,16 @@ void HuffTree::testPrint(Node* n, int depth) {
 		for (int i = 0; i < depth; i++) {
 			cout << "    ";
 		}
-		cout << ")" << endl;
+		cout << ")";
 	}
 	cout << endl;
 }
 
 void HuffTree::generateCodes(Node* n, string code) {
 	if (n->left == nullptr && n->right == nullptr) {
+		if (code == "") {
+			code = "0";
+		}
 		n->code = code;
 
 		// Testing
