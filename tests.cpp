@@ -413,96 +413,114 @@ TEST 53 - Length of codes increases with number of characters
     'c' --> 11
   Result: PASS
 
-TEST 54 -
-  Run:
+TEST 54 - Three distinct characters with equal frequencies
+  Run: echo "abc" | ./Encryption-Term-Project
   Expected:
+    'a', 'b', and 'c' all receive unique binary codes.
   Result: PASS
 
-TEST 55 -
-  Run:
+TEST 55 - Case sensitivity is maintained
+  Run: echo "aA" | ./Encryption-Term-Project
   Expected:
+    'a' and 'A' are treated as completely distinct characters with unique codes.
   Result: PASS
 
-TEST 56 -
-  Run:
+TEST 56 - Space characters are encoded correctly
+  Run: echo "a b" | ./Encryption-Term-Project
   Expected:
+    ' ' (space) receives a unique binary code along with 'a' and 'b'.
   Result: PASS
 
-TEST 57 -
-  Run:
+TEST 57 - Numeric characters are encoded correctly
+  Run: echo "123" | ./Encryption-Term-Project
   Expected:
+    '1', '2', and '3' receive unique binary codes.
   Result: PASS
 
-TEST 58 -
-  Run:
+TEST 58 - Special symbols are encoded correctly
+  Run: echo "!@#" | ./Encryption-Term-Project
   Expected:
+    '!', '@', and '#' receive unique binary codes.
   Result: PASS
 
-TEST 59 -
-  Run:
+TEST 59 - Skewed frequencies assign shorter codes to frequent characters
+  Run: echo "abbccc" | ./Encryption-Term-Project
   Expected:
+    'c' has the shortest code (1 bit), while 'a' and 'b' have longer codes.
   Result: PASS
 
-TEST 60 -
-  Run:
+TEST 60 - Extreme frequency skewing
+  Run: echo "a bbb ccccccc" | ./Encryption-Term-Project
   Expected:
+    'c' has the shortest code, followed by 'b', then 'a' and ' '.
   Result: PASS
 
-TEST 61 -
-  Run:
+TEST 61 - Long repeated single character
+  Run: echo "zzzzzzzzzz" | ./Encryption-Term-Project
   Expected:
+    'z' --> 0 (or 1).
   Result: PASS
 
-TEST 62 -
-  Run:
+TEST 62 - Alternating sequence of two characters
+  Run: echo "abababab" | ./Encryption-Term-Project
   Expected:
+    'a' and 'b' both receive 1-bit codes (0 and 1).
   Result: PASS
 
-TEST 63 -
-  Run:
+TEST 63 - Palindrome sequence
+  Run: echo "racecar" | ./Encryption-Term-Project
   Expected:
+    Unique codes are generated correctly for 'r', 'a', 'c', and 'e'.
   Result: PASS
 
-TEST 64 -
-  Run:
+TEST 64 - Full sentence with spaces
+  Run: echo "hello world" | ./Encryption-Term-Project
   Expected:
+    'l' receives the shortest code (appears 3 times), followed by 'o' (appears 2 times).
   Result: PASS
 
-TEST 65 -
-  Run:
+TEST 65 - All vowels (equal frequencies)
+  Run: echo "aeiou" | ./Encryption-Term-Project
   Expected:
+    5 unique, evenly distributed codes are generated.
   Result: PASS
 
-TEST 66 -
-  Run:
+TEST 66 - Mixed alphanumeric characters
+  Run: echo "h3ll0" | ./Encryption-Term-Project
   Expected:
+    Unique codes are generated for 'h', '3', 'l', and '0'.
   Result: PASS
 
-TEST 67 -
-  Run:
+TEST 67 - Balanced pair frequencies
+  Run: echo "aabbccdd" | ./Encryption-Term-Project
   Expected:
+    All 4 characters receive 2-bit codes due to the perfectly balanced tree.
   Result: PASS
 
-TEST 68 -
-  Run:
+TEST 68 - Single punctuation mark
+  Run: echo "." | ./Encryption-Term-Project
   Expected:
+    '.' --> 0 (or 1).
   Result: PASS
 
-TEST 69 -
-  Run:
+TEST 69 - Escaped characters (Newline)
+  Run: echo -e "a\nb" | ./Encryption-Term-Project
   Expected:
+    The newline character ('\n') is captured and assigned a unique binary code.
   Result: PASS
 
-TEST 70 -
-  Run:
+TEST 70 - Large string (Pangram)
+  Run: echo "the quick brown fox jumps over the lazy dog" | ./Encryption-Term-Project
   Expected:
+    ' ' (space) gets the shortest code (appears 8 times); all alphabet characters get valid unique codes.
   Result: PASS
+
 =============================================================
   RESULTS SUMMARY
 =============================================================
 
-  Total tests:   30
-    Passed:      30
+  Total tests:   70
+    Passed:      70
     Failed:       0
 
   Tests that failed:
