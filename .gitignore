@@ -1,7 +1,8 @@
 # Prerequisites
 *.d
-bigfile_random.dat
-compressed.huff
+testFiles/*
+compressed/*
+uncompressed/*
 
 # Compiled Object files
 *.slo
