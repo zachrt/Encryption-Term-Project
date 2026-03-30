@@ -146,12 +146,27 @@ string HuffmanTree::decompress(const string& compressed) {
     root = deserializeTree(treeData, index);
     generateCodes(root, "");
 
-    // Decode inline
-    string bits = fromBinary(compressed.substr(4 + treeSize));
+    string data = compressed.substr(4 + treeSize);
+
+    int padding = (unsigned char)data[data.size() - 2];
+
     string result = "";
     Node* curr = root;
-    for (char bit : bits) {
-        curr = (bit == '0') ? curr->left : curr->right;
+
+    for (int i = 0; i < (int)data.size() - 2; i++) {
+        unsigned char byte = data[i];
+        for (int b = 7; b >= 0; b--) {
+            curr = ((byte >> b) & 1) ? curr->right : curr->left;
+            if (!curr->left && !curr->right) {
+                result += curr->ch;
+                curr = root;
+            }
+        }
+    }
+
+    unsigned char lastByte = data[data.size() - 1];
+    for (int b = 7; b >= (int)padding; b--) {
+        curr = ((lastByte >> b) & 1) ? curr->right : curr->left;
         if (!curr->left && !curr->right) {
             result += curr->ch;
             curr = root;

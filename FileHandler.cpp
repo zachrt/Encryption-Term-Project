@@ -97,8 +97,5 @@ string FileHandler::pickOutputPath() {
     string name;
     getline(cin, name);
 
-    if (name.size() < 5 || name.substr(name.size() - 5) != ".huff")
-    name += ".huff";
-
     return dir + "/" + name;
 }
