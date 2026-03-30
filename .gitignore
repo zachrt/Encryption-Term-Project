@@ -1,5 +1,8 @@
 # Prerequisites
 *.d
+testFiles/*
+compressed/*
+uncompressed/*
 
 # Compiled Object files
 *.slo

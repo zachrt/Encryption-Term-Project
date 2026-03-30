@@ -86,24 +86,10 @@ CMakeFiles/Encryption-Term-Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Encryption-Term-Project.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/compass/Documents/Repos/School/Encryption-Term-Project/main.cpp -o CMakeFiles/Encryption-Term-Project.dir/main.cpp.s
 
-CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o: CMakeFiles/Encryption-Term-Project.dir/flags.make
-CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o: /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp
-CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o: CMakeFiles/Encryption-Term-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o -MF CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o.d -o CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp
-
-CMakeFiles/Encryption-Term-Project.dir/Node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Encryption-Term-Project.dir/Node.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp > CMakeFiles/Encryption-Term-Project.dir/Node.cpp.i
-
-CMakeFiles/Encryption-Term-Project.dir/Node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Encryption-Term-Project.dir/Node.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.cpp -o CMakeFiles/Encryption-Term-Project.dir/Node.cpp.s
-
 CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o: CMakeFiles/Encryption-Term-Project.dir/flags.make
 CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o: /Users/compass/Documents/Repos/School/Encryption-Term-Project/PriorityQueue.cpp
 CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o: CMakeFiles/Encryption-Term-Project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o -MF CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o.d -o CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/PriorityQueue.cpp
 
 CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.i: cmake_force
@@ -114,21 +100,51 @@ CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/compass/Documents/Repos/School/Encryption-Term-Project/PriorityQueue.cpp -o CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.s
 
+CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o: CMakeFiles/Encryption-Term-Project.dir/flags.make
+CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o: /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp
+CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o: CMakeFiles/Encryption-Term-Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o -MF CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o.d -o CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp
+
+CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp > CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.i
+
+CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.cpp -o CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.s
+
+CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o: CMakeFiles/Encryption-Term-Project.dir/flags.make
+CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o: /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp
+CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o: CMakeFiles/Encryption-Term-Project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o -MF CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o.d -o CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o -c /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp
+
+CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp > CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.i
+
+CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.cpp -o CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.s
+
 # Object files for target Encryption-Term-Project
 Encryption__Term__Project_OBJECTS = \
 "CMakeFiles/Encryption-Term-Project.dir/main.cpp.o" \
-"CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o" \
-"CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o"
+"CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o" \
+"CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o" \
+"CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o"
 
 # External object files for target Encryption-Term-Project
 Encryption__Term__Project_EXTERNAL_OBJECTS =
 
 Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/main.cpp.o
-Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/Node.cpp.o
 Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/PriorityQueue.cpp.o
+Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/HuffmanTree.cpp.o
+Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/FileHandler.cpp.o
 Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/build.make
 Encryption-Term-Project: CMakeFiles/Encryption-Term-Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Encryption-Term-Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/compass/Documents/Repos/School/Encryption-Term-Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Encryption-Term-Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Encryption-Term-Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
