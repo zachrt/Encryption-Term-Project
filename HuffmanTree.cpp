@@ -21,16 +21,20 @@ void HuffmanTree::build(PriorityQueue& pq) {
         Node* merged = new Node(left->freq + right->freq, left, right);
         pq.push(merged);
     }
+
     root = pq.pop();
+
     generateCodes(root, "");
 }
 
 void HuffmanTree::generateCodes(Node* node, string code) {
     if (!node) return;
+
     if (!node->left && !node->right) {
         codes[node->ch] = code.empty() ? "0" : code;
         return;
     }
+
     generateCodes(node->left,  code + "0");
     generateCodes(node->right, code + "1");
 }
@@ -62,8 +66,8 @@ string HuffmanTree::toBinary(const string& bits) {
 
 string HuffmanTree::fromBinary(const string& binary) {
     int padding = (unsigned char)binary[0];
-
     string bits = "";
+    
     for (int i = 1; i < (int)binary.size(); i++) {
         unsigned char byte = binary[i];
         for (int b = 7; b >= 0; b--)
@@ -78,8 +82,10 @@ string HuffmanTree::fromBinary(const string& binary) {
 
 string HuffmanTree::serializeTree(Node* node) {
     if (!node) return "";
+
     if (!node->left && !node->right)
         return "L" + string(1, node->ch);
+
     return "I" + serializeTree(node->left) + serializeTree(node->right);
 }
 
@@ -92,16 +98,19 @@ Node* HuffmanTree::deserializeTree(const string& data, int& i) {
     }
 
     i++; // skip 'I'
+
     Node* left  = deserializeTree(data, i);
     Node* right = deserializeTree(data, i);
+
     return new Node(0, left, right);
 }
 
 string HuffmanTree::compress(const string& input) {
     string treeData = serializeTree(root);
-    int treeSize = treeData.size();
-
     string result = "";
+
+    int treeSize = treeData.size();
+    
 
     result += (char)((treeSize >> 24) & 0xFF);
     result += (char)((treeSize >> 16) & 0xFF);
@@ -129,6 +138,7 @@ string HuffmanTree::compress(const string& input) {
 
     char padding = (bitCount > 0) ? (8 - bitCount) : 0;
     result += padding; 
+
     if (bitCount > 0)
         result += currentByte;
 
@@ -142,8 +152,11 @@ string HuffmanTree::decompress(const string& compressed) {
                    ((unsigned char)compressed[3]);
 
     string treeData = compressed.substr(4, treeSize);
+
     int index = 0;
+
     root = deserializeTree(treeData, index);
+    
     generateCodes(root, "");
 
     string data = compressed.substr(4 + treeSize);
