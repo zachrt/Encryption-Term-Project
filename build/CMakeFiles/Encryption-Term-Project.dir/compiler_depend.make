@@ -3220,6 +3220,7 @@ CMakeFiles/Encryption-Term-Project.dir/main.cpp.o: /Users/compass/Documents/Repo
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
+  /Users/compass/Documents/Repos/School/Encryption-Term-Project/Encryptor.h \
   /Users/compass/Documents/Repos/School/Encryption-Term-Project/FileHandler.h \
   /Users/compass/Documents/Repos/School/Encryption-Term-Project/HuffmanTree.h \
   /Users/compass/Documents/Repos/School/Encryption-Term-Project/Node.h \
@@ -4591,6 +4592,8 @@ CMakeFiles/Encryption-Term-Project.dir/main.cpp.o: /Users/compass/Documents/Repo
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/invert_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/common_comparison_category.h:
+
+/Users/compass/Documents/Repos/School/Encryption-Term-Project/Encryptor.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 

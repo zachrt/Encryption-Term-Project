@@ -134,8 +134,11 @@ void compressAndEncrypt() {
     // Encrypt (XOR with key)
     string encrypted = Encryptor::process(compressed, key);
 
-    //  Save File
-    FileHandler::writeFile(outPath, encrypted); //
+    //  Save File w/ header to check password on decryption
+    string header = Encryptor::process("HUFFMAN_OK", key);
+    string finalOutput = header + "|" + encrypted; 
+
+    FileHandler::writeFile(outPath, finalOutput);
     cout << "\nFile compressed and encrypted successfully!\n";
 }
 
@@ -148,13 +151,30 @@ void decryptAndDecompress() {
     string outPath = FileHandler::pickOutputPath();
     if (outPath.empty()) return;
 
-    string encryptedData = FileHandler::readFile(inPath);
-    if (encryptedData.empty()) return;
+    string rawFileData = FileHandler::readFile(inPath);
+    if (rawFileData.empty()) return;
 
     // Get Key
     cout << "Enter the secret key for decryption: ";
     string key;
     getline(cin, key);
+
+    // 1. Split the header from the data
+    size_t separator = rawFileData.find('|');
+    if (separator == string::npos) {
+        cout << "Error: File format invalid.\n";
+        return;
+    }
+
+    string encryptedHeader = rawFileData.substr(0, separator);
+    string encryptedData = rawFileData.substr(separator + 1);
+
+    // 2. Validate Key
+    string decryptedHeader = Encryptor::process(encryptedHeader, key);
+    if (decryptedHeader != "HUFFMAN_OK") {
+        cout << "\n[!] ERROR: Incorrect password. Decryption aborted to prevent crash.\n";
+        return;
+    }
 
     auto start = chrono::high_resolution_clock::now();
 
