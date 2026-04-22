@@ -31,7 +31,7 @@ void HuffmanTree::generateCodes(Node* node, string code) {
     if (!node) return;
 
     if (!node->left && !node->right) {
-        codes[node->ch] = code.empty() ? "0" : code;
+        codes.insert(node->ch, code.empty() ? "0" : code);
         return;
     }
 
@@ -40,8 +40,12 @@ void HuffmanTree::generateCodes(Node* node, string code) {
 }
 
 void HuffmanTree::printCodes() {
-    for (auto& pair : codes)
-        cout << "'" << pair.first << "' --> " << pair.second << "\n";
+    HashEntry* table = codes.getTable();
+    for (int i = 0; i < 256; i++) {
+        if (table[i].active) {
+            cout << "'" << table[i].key << "' --> " << table[i].code << "\n";
+        }
+    }
 }
 
 string HuffmanTree::toBinary(const string& bits) {
@@ -106,28 +110,33 @@ Node* HuffmanTree::deserializeTree(const string& data, int& i) {
 }
 
 string HuffmanTree::compress(const string& input) {
+    // Serialize the tree structure for the file header
     string treeData = serializeTree(root);
     string result = "";
 
-    int treeSize = treeData.size();
-    
-
+    // Store the size of the tree so the decompressor knows where it ends
+    int treeSize = (int)treeData.size();
     result += (char)((treeSize >> 24) & 0xFF);
     result += (char)((treeSize >> 16) & 0xFF);
     result += (char)((treeSize >> 8)  & 0xFF);
     result += (char)((treeSize)       & 0xFF);
+    
+    // Append the tree structure itself
     result += treeData;
 
     char currentByte = 0;
     int bitCount = 0;
 
+    // Process input characters and pack bits using the custom Hash Table
     for (char c : input) {
-        const string& code = codes.at(c);
+        string code = codes.get(c); 
+        
         for (char bit : code) {
             if (bit == '1')
                 currentByte |= (1 << (7 - bitCount));
             bitCount++;
 
+            // When we have a full byte, add it to the result string
             if (bitCount == 8) {
                 result += currentByte;
                 currentByte = 0;
@@ -136,6 +145,7 @@ string HuffmanTree::compress(const string& input) {
         }
     }
 
+    // Handle remaining bits
     char padding = (bitCount > 0) ? (8 - bitCount) : 0;
     result += padding; 
 
@@ -146,6 +156,7 @@ string HuffmanTree::compress(const string& input) {
 }
 
 string HuffmanTree::decompress(const string& compressed) {
+    // Reconstruct the tree size
     int treeSize = ((unsigned char)compressed[0] << 24) |
                    ((unsigned char)compressed[1] << 16) |
                    ((unsigned char)compressed[2] << 8)  |
@@ -154,29 +165,34 @@ string HuffmanTree::decompress(const string& compressed) {
     string treeData = compressed.substr(4, treeSize);
 
     int index = 0;
-
+    // Rebuild the tree from the serialized data
     root = deserializeTree(treeData, index);
     
+    //  Populate the custom SimpleHashTable
     generateCodes(root, "");
 
+    // Extract the actual encoded data
     string data = compressed.substr(4 + treeSize);
 
+    //  Identify the padding from the second-to-last byte
     int padding = (unsigned char)data[data.size() - 2];
 
     string result = "";
     Node* curr = root;
 
+    // Traverse the tree bit-by-bit to decode the characters
     for (int i = 0; i < (int)data.size() - 2; i++) {
         unsigned char byte = data[i];
         for (int b = 7; b >= 0; b--) {
             curr = ((byte >> b) & 1) ? curr->right : curr->left;
             if (!curr->left && !curr->right) {
                 result += curr->ch;
-                curr = root;
+                curr = root; // Reset to top for next character
             }
         }
     }
 
+    // Process the final byte while respecting the padding
     unsigned char lastByte = data[data.size() - 1];
     for (int b = 7; b >= (int)padding; b--) {
         curr = ((lastByte >> b) & 1) ? curr->right : curr->left;

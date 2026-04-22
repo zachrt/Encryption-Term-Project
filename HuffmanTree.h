@@ -6,10 +6,35 @@
 
 using namespace std;
 
+struct HashEntry {
+    char key;
+    std::string code;
+    bool active = false;
+};
+
+class HashTable {
+private:
+    HashEntry table[256];
+public:
+    void insert(char c, std::string s) {
+        int idx = (unsigned char)c;
+        table[idx].key = c;
+        table[idx].code = s;
+        table[idx].active = true;
+    }
+
+    std::string get(char c) { return table[(unsigned char)c].code; }
+
+    HashEntry* getTable() { 
+        return table; 
+    }
+    
+};
+
 class HuffmanTree {
 private:
     Node* root;
-    unordered_map<char, string> codes;
+    HashTable codes;
 
     void generateCodes(Node* node, string code);
     void deleteTree(Node* node);
